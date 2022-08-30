@@ -1,0 +1,21 @@
+{
+	"name": "cypress_poc",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"cypress:headless": "cypress run --headless --browser chrome",
+		"cypress:open": "cypress open"
+	},
+	"keywords": [
+		"cypress",
+		"test automation",
+		"testing",
+		"end to end testing"
+	],
+	"author": "Faisal Khatri",
+	"license": "ISC",
+	"dependencies": {
+		"@faker-js/faker": "^7.4.0"
+	}
+}

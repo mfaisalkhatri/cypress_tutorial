@@ -1,0 +1,12 @@
+# JavaScript node dependencies
+/node_modules/
+
+#VS Code setting files
+.vscode/
+
+# IntelliJ IDEA
+/.idea/
+*.iml
+
+#cypress related not required
+/cypress/videos
