@@ -1,7 +1,11 @@
-class registrationPage  {
+import { faker } from '@faker-js/faker';
 
+class RegistrationPage  {
+	
+	
 webElements = {
 
+pageTitle : () => cy.get('h1'),
 firstnameField : () => cy.get('#input-firstname'),
 lastNameField : ()  => cy.get('#input-lastname'),
 emailField : () => cy.get('#input-email'),
@@ -12,16 +16,23 @@ agreeTermsField : () => cy.get('.float-right > .custom-control > .custom-control
 continueBtn : () =>		cy.get('.float-right > .btn'),
 }
 
-registerUser () {
-        this.webElements.firstnameField().type(FIRST_NAME);
-		this.webElements.lastNameField().type(LAST_NAME);
+
+	pageHeader () {
+		return this.webElements.pageTitle();
+	}
+
+	registerUser () {
+		const PASSWORD = 'PASS123#';
+	
+        this.webElements.firstnameField().type(faker.name.firstName());
+		this.webElements.lastNameField().type(faker.name.lastName());
 		this.webElements.emailField().type(faker.internet.email());
 		this.webElements.telephoneField().type(faker.datatype.number(9999999999));
 		this.webElements.passwordField().type(PASSWORD);
 		this.webElements.confirmParsswordField().type(PASSWORD);
 		this.webElements.agreeTermsField().click();
 		this.webElements.continueBtn().click();
-}
+	}
 }
 
-module.exports = new registrationPage();
+export default new RegistrationPage();

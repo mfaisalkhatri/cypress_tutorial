@@ -1,3 +1,5 @@
+const { defineConfig } = require('cypress')
+
 module.exports = {
 	e2e: {
 		setupNodeEvents(on, config) {},
@@ -5,5 +7,7 @@ module.exports = {
 		viewportHeight: 660,
 		viewportWidth: 1050,
 		video: true,
+		experimentalSessionAndOrigin: false
+		
 	},
 };
