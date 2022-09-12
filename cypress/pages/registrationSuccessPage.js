@@ -7,11 +7,8 @@ class RegistrationSuccessPage {
 		
     }
     
-    verifySuccessfulRegistration () {
-        this.webElements.registrationSuccessPageTitle().should(
-			'have.text',
-			' Your Account Has Been Created!'
-		);
+    getSuccessfulRegistrationMessage () {
+       return this.webElements.registrationSuccessPageTitle();
     }
 
     continueToMyAccountPage () {

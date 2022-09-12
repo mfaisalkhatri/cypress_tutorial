@@ -1,6 +1,4 @@
-import {faker} from '@faker-js/faker';
-import billingData from '../testdata/billingdata';
-import { BillingData } from '../testdata/bliingDataNew';
+import { BillingData } from '../testdata/billingDataNew';
 class CheckoutPage {
     
   webElements = {
@@ -28,11 +26,10 @@ class CheckoutPage {
 
   enterBillingAddress() {
     this.webElements.firstNameField().type(BillingData.billingAddress.firstName);
-    cy.log(BillingData.newmethod());
-    this.webElements.lastNameField().type(faker.name.lastName());
-    this.webElements.addressOneField().type(faker.address.streetAddress());
-    this.webElements.cityField().type(faker.address.city());
-    this.webElements.postCodeField().type(faker.address.zipCode());
+    this.webElements.lastNameField().type(BillingData.billingAddress.lastName);
+    this.webElements.addressOneField().type(BillingData.billingAddress.address);
+    this.webElements.cityField().type(BillingData.billingAddress.city);
+    this.webElements.postCodeField().type(BillingData.billingAddress.postCode);
     this.webElements.countryField().select('India');
     this.webElements.stateField().select('Maharashtra');
     this.webElements.termsAndConditions().click();

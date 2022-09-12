@@ -16,7 +16,6 @@ agreeTermsField : () => cy.get('.float-right > .custom-control > .custom-control
 continueBtn : () =>		cy.get('.float-right > .btn'),
 }
 
-
 	pageHeader () {
 		return this.webElements.pageTitle();
 	}

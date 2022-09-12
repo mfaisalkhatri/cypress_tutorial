@@ -16,11 +16,8 @@ class ProductPage {
             .click({ force: true });
     }
 
-    verifySuccessMessage () {
-        this.webElements.successMessage().should(
-            'have.text',
-            'Success: You have added Palm Treo Pro to your shopping cart!'
-        );
+    getSuccessMessage () {
+        return this.webElements.successMessage();
     }
 
     checkoutProduct () {
