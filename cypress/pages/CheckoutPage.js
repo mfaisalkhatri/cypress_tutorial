@@ -24,6 +24,7 @@ class CheckoutPage {
     return this.webElements.productName();
   }
 
+
   enterBillingAddress() {
     this.webElements.firstNameField().type(BillingData.billingAddress.firstName);
     this.webElements.lastNameField().type(BillingData.billingAddress.lastName);
@@ -36,6 +37,7 @@ class CheckoutPage {
   }
 
   continueToConfirmOrder () {
+    this.webElements.termsAndConditions().click();
     this.webElements.continueBtn().click();
   }
 }
